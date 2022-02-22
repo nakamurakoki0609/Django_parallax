@@ -1,0 +1,117 @@
+
+ul.navi-top, ul.navi-top a {
+    color:white;/*文字の色*/
+    background-color:black;/*メニューバーの背景色*/}
+
+ul.navi-top a:hover {
+    color:white;/*マウスオーバーの時の文字の色*/
+    background-color:grey;/*マウスオーバーの時の背景色*/}
+
+ul.navi-top {
+    position:fixed;
+    left:0;
+    top:0;
+    margin: 0;
+    padding:0;
+    font-size:14px;
+    width:100%;
+    text-align:center;
+    z-index:50;
+}
+
+
+ul.navi-top li {
+    width: 125px;
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+}
+
+ul.navi-top a {
+    line-height: 36px;
+    text-align: center;
+    padding-left:10px;
+    text-decoration: none;
+    font-weight: nomarl;
+    display: block;
+}
+
+/*２階層*/
+ul.navi-top ul {
+    display: none;
+    margin:0px;
+    padding:0px; 
+    position: absolute;
+}
+
+ul.navi-top ul a{
+    width:125px;/*２階層目の幅*/}
+    ul.navi-top li:hover ul {
+    display: block;
+}
+
+.navi-top{
+    z-index:3;
+    position: relative;
+}
+
+
+#section1 {
+    background-image: url("/static/images/appearance_cafe.jpg");
+    color:  #000000;
+    height: 100vh;
+    }
+
+#section2 {
+    background-image: url("/static/images/inside_cafe.jpg");
+    color:  #000000;
+    height: 100vh;
+    }
+
+#section3 {
+    background-image: url("/static/images/cafe_coffee.jpg");
+    color:  #000000;
+    height: 100vh;
+    }
+    
+#section4 {
+    background-image: url("/static/images/outside_cafe.jpg");
+    color: #000000;
+    height: 100vh;
+    }
+.section{
+    z-index:1;
+    background-size: 100%;
+    position: relative;
+}
+.section::before{
+    z-index:2;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(254, 254, 254, 0.2);
+    filter: blur(10px);
+}
+.section h2{
+    padding-left: 120px;
+    padding-top: 120px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.section p{
+    margin-left: 40px;
+    margin-top: 20px;
+    font-family: serif,'Microsoft Sans Serif';
+    word-wrap: break-word;
+    width: 35%;
+    background:rgba(254, 254, 254, 0.7);
+    font-size:18px;
+    border-radius: 10px;
+}
+
+body{
+    margin:0;
+}
